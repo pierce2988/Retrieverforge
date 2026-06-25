@@ -1,0 +1,160 @@
+/* ============================================================
+   RETRIEVERFORGE — GAUGES & PEDIGREE BRACKET (signature element)
+   ============================================================ */
+
+.rf-rating-card__dial { display: flex; justify-content: center; }
+.rf-dial { display: block; }
+.rf-dial__sweep {
+  transition: stroke-dashoffset 1.1s var(--rf-ease);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .rf-dial__sweep.rf-animate-in {
+    stroke-dashoffset: var(--rf-circ);
+    animation: rf-sweep-in 1.1s var(--rf-ease) forwards;
+  }
+  @keyframes rf-sweep-in {
+    to { stroke-dashoffset: var(--rf-offset); }
+  }
+}
+
+.rf-mini-dial { display: flex; flex-direction: column; align-items: center; gap: var(--sp-2); }
+.rf-mini-dial__label {
+  font-family: var(--rf-mono);
+  font-size: var(--rf-size-micro);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.rf-bar-meter {
+  height: 5px;
+  background: var(--rf-bone-2);
+  border-radius: var(--rf-radius-pill);
+  overflow: hidden;
+  flex: 1;
+}
+.rf-bar-meter__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--rf-copper-dim), var(--rf-copper-hi));
+  border-radius: var(--rf-radius-pill);
+}
+
+/* ---------- Rating Card (composite) ---------- */
+.rf-rating-card {
+  background: var(--rf-black);
+  border-radius: var(--rf-radius-lg);
+  padding: var(--sp-7);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--sp-8);
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--rf-line-dark);
+}
+.rf-rating-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: radial-gradient(circle at 85% 15%, rgba(181,112,58,0.14), transparent 55%);
+  pointer-events: none;
+}
+.rf-rating-card__label { margin-bottom: var(--sp-5); }
+.rf-rating-card__subs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--sp-5);
+}
+@media (max-width: 900px) {
+  .rf-rating-card { grid-template-columns: 1fr; text-align: center; justify-items: center; gap: var(--sp-6); }
+  .rf-rating-card__subs { grid-template-columns: repeat(5, 1fr); gap: var(--sp-4); }
+}
+@media (max-width: 560px) {
+  .rf-rating-card__subs { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ============================================================
+   PEDIGREE BRACKET
+   The recurring signature: pedigree drawn as a forged bracket —
+   joined hairline segments like welded stock, generations
+   nested left (subject) to right (ancestors), echoing both a
+   family tree and a tournament bracket.
+   ============================================================ */
+
+.rf-pedigree {
+  background: var(--rf-paper);
+  border: 1px solid var(--rf-line-light);
+  border-radius: var(--rf-radius-lg);
+  padding: var(--sp-6);
+  overflow-x: auto;
+}
+.rf-pedigree__scroll {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 220px;
+  min-width: 880px;
+}
+.rf-pedigree__gen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  padding: 0 var(--sp-3);
+}
+.rf-pedigree__gen-label {
+  position: absolute;
+  top: -28px;
+  left: var(--sp-3);
+}
+.rf-pedigree__node {
+  position: relative;
+  background: var(--rf-bone);
+  border: 1px solid var(--rf-line-light);
+  border-radius: var(--rf-radius-sm);
+  padding: var(--sp-3);
+  margin: 6px 0;
+  transition: border-color var(--rf-dur-fast) var(--rf-ease), background var(--rf-dur-fast) var(--rf-ease);
+}
+.rf-pedigree__node:hover { border-color: var(--rf-copper); background: var(--rf-bone-2); cursor: pointer; }
+.rf-pedigree__node-name { font-family: var(--rf-display); font-weight: 600; font-size: 0.92rem; line-height: 1.2; margin-bottom: 2px; }
+.rf-pedigree__node-titles { font-family: var(--rf-mono); font-size: 10px; letter-spacing: 0.03em; color: var(--rf-copper-dim); }
+.rf-pedigree__node-health { font-family: var(--rf-mono); font-size: 9px; color: var(--rf-smoke); margin-top: 4px; }
+
+/* Joined hairline "weld seams" connecting each node to its two parents */
+.rf-pedigree__gen:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 1px;
+  background-image: repeating-linear-gradient(to bottom, var(--rf-copper-dim) 0 4px, transparent 4px 8px);
+  opacity: 0.4;
+}
+.rf-pedigree__node::after {
+  content: "";
+  position: absolute;
+  right: -13px; top: 50%;
+  width: 13px; height: 1px;
+  background: var(--rf-line-light);
+}
+.rf-pedigree__gen:last-child .rf-pedigree__node::after { display: none; }
+
+/* ---------- Compact pedigree snapshot (used on breeding cards / small contexts) ---------- */
+.rf-ped-snap { display: flex; align-items: center; gap: var(--sp-2); font-family: var(--rf-mono); font-size: var(--rf-size-micro); color: var(--rf-smoke); }
+.rf-ped-snap b { color: var(--rf-charcoal); font-weight: 600; }
+
+/* ---------- Health clearance row (forged metal tag aesthetic) ---------- */
+.rf-clearance-row { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.rf-clearance-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--rf-mono);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  padding: 5px 10px 5px 8px;
+  border-radius: var(--rf-radius-sm);
+  border: 1px solid rgba(90,122,94,0.3);
+  background: rgba(90,122,94,0.07);
+  color: var(--rf-good);
+}
+.rf-clearance-tag svg { width: 11px; height: 11px; }
+.rf-clearance-tag.is-dark { background: rgba(90,122,94,0.12); border-color: rgba(90,122,94,0.35); }

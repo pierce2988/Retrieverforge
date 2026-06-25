@@ -1,0 +1,26 @@
+/* ============================================================
+   RETRIEVERFORGE — GEAR DETAIL
+   ============================================================ */
+
+.rf-gear-detail {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: var(--sp-8);
+  padding: var(--sp-6) 0 var(--sp-7);
+}
+@media (max-width: 800px) {
+  .rf-gear-detail { grid-template-columns: 1fr; }
+}
+.rf-gear-detail__photo { aspect-ratio: 4/3; border-radius: var(--rf-radius-lg); overflow: hidden; background: var(--rf-bone); }
+.rf-gear-detail__photo svg { width: 100%; height: 100%; }
+.rf-gear-detail__scores { display: flex; gap: var(--sp-7); margin: var(--sp-5) 0 var(--sp-6); }
+.rf-gear-detail__score-block { display: flex; flex-direction: column; gap: 4px; }
+.rf-gear-detail__score-num { font-family: var(--rf-mono); font-size: 2.2rem; font-weight: 700; color: var(--rf-copper-dim); }
+.rf-gear-detail__procon { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-6); }
+@media (max-width: 560px) { .rf-gear-detail__procon { grid-template-columns: 1fr; } }
+.rf-gear-detail__procon-title { font-family: var(--rf-mono); font-size: var(--rf-size-micro); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: var(--sp-3); }
+.rf-gear-detail__procon-title--pro { color: var(--rf-good); }
+.rf-gear-detail__procon-title--con { color: #A24A3C; }
+.rf-gear-detail__procon ul { display: flex; flex-direction: column; gap: var(--sp-2); }
+.rf-gear-detail__procon li { font-size: var(--rf-size-body-sm); color: var(--rf-charcoal); padding-left: var(--sp-4); position: relative; }
+.rf-gear-detail__procon li::before { content: "—"; position: absolute; left: 0; color: var(--rf-smoke); }

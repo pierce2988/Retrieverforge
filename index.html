@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RetrieverForge — Forge Your Retriever.</title>
+<meta name="description" content="The modern platform for researching hunting retrievers, verified breedings, proven studs, health records, and bloodlines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/gauges.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/search-modal.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+<a href="#main" class="rf-skip">Skip to content</a>
+<div id="rf-nav-mount"></div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="rf-hero">
+    <div class="rf-hero__art" id="rf-hero-art"></div>
+    <div class="rf-hero__scrim"></div>
+    <div class="rf-container rf-hero__inner">
+      <p class="rf-eyebrow on-dark">VERIFIED BLOODLINES · PROVEN STUDS · HONEST RECORDS</p>
+      <h1 class="rf-display-xl on-dark">Forge Your<br>Retriever.</h1>
+      <p class="rf-body-lg on-dark rf-hero__sub">The modern platform for researching hunting retrievers — verified breedings, proven studs, health records, and bloodlines, organized for people who actually have to make the decision.</p>
+
+      <form class="rf-hero__search" id="rf-hero-search" role="search">
+        <span class="rf-hero__search-icon" id="rf-hero-search-icon"></span>
+        <input type="text" placeholder="Search a dog, stud, breeder, or bloodline…" id="rf-hero-search-input" aria-label="Search RetrieverForge">
+        <button type="submit" class="rf-btn rf-btn--copper">Search</button>
+      </form>
+      <div class="rf-hero__chips">
+        <span class="rf-micro on-dark">TRY:</span>
+        <button class="rf-chip" data-q="Field Champion">Field Champions</button>
+        <button class="rf-chip" data-q="Louisiana">Louisiana Kennels</button>
+        <button class="rf-chip" data-q="EIC Clear">EIC Clear Studs</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <section class="rf-trust">
+    <div class="rf-container rf-trust__row">
+      <div class="rf-trust__item"><span class="rf-trust__num">1,840+</span><span class="rf-micro">Verified Dogs</span></div>
+      <div class="rf-trust__item"><span class="rf-trust__num">312</span><span class="rf-micro">Verified Breedings</span></div>
+      <div class="rf-trust__item"><span class="rf-trust__num">96%</span><span class="rf-micro">Clearances on File</span></div>
+      <div class="rf-trust__item"><span class="rf-trust__num">540</span><span class="rf-micro">Registered Breeders</span></div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED STUDS ============ -->
+  <section class="rf-section rf-section--dark" id="rf-featured-studs-section">
+    <div class="rf-container">
+      <div class="rf-section-head">
+        <div class="rf-section-head__title">
+          <span class="rf-eyebrow">FEATURED</span>
+          <h2 class="rf-display-md on-dark">Featured Studs</h2>
+        </div>
+        <a href="studs.html" class="rf-see-all">Browse all studs</a>
+      </div>
+      <div class="rf-grid" id="rf-featured-studs"></div>
+    </div>
+  </section>
+
+  <!-- ============ RECENTLY VERIFIED BREEDINGS ============ -->
+  <section class="rf-section">
+    <div class="rf-container">
+      <div class="rf-section-head">
+        <div class="rf-section-head__title">
+          <span class="rf-eyebrow">JUST CONFIRMED</span>
+          <h2 class="rf-display-md">Recently Verified Breedings</h2>
+        </div>
+        <a href="breedings.html" class="rf-see-all">All breedings</a>
+      </div>
+      <div class="rf-grid rf-grid--3" id="rf-recent-breedings"></div>
+    </div>
+  </section>
+
+  <!-- ============ STUDFORGE RATING EXPLAINER (signature) ============ -->
+  <section class="rf-section rf-section--dark rf-rating-explainer">
+    <div class="rf-container">
+      <div class="rf-rating-explainer__head">
+        <span class="rf-eyebrow">THE STUDFORGE RATING</span>
+        <h2 class="rf-display-lg on-dark">One score.<br>Five things that actually matter.</h2>
+        <p class="rf-body-lg on-dark rf-rating-explainer__sub">RetrieverForge isn't trying to predict what a puppy becomes. It organizes what's already verified — health, performance, production, pedigree, and how confident we are in the data — into one number you can compare across any two dogs.</p>
+      </div>
+      <div class="rf-rating-card" id="rf-rating-demo"></div>
+    </div>
+  </section>
+
+  <!-- ============ NEWEST LITTERS ============ -->
+  <section class="rf-section">
+    <div class="rf-container">
+      <div class="rf-section-head">
+        <div class="rf-section-head__title">
+          <span class="rf-eyebrow">AVAILABILITY</span>
+          <h2 class="rf-display-md">Newest Litters</h2>
+        </div>
+        <a href="litters.html" class="rf-see-all">All litters</a>
+      </div>
+      <div class="rf-rail" id="rf-newest-litters"></div>
+    </div>
+  </section>
+
+  <!-- ============ TOP BREEDERS ============ -->
+  <section class="rf-section rf-section--bone">
+    <div class="rf-container">
+      <div class="rf-section-head">
+        <div class="rf-section-head__title">
+          <span class="rf-eyebrow">TRUSTED PROGRAMS</span>
+          <h2 class="rf-display-md">Top Breeders</h2>
+        </div>
+        <a href="breeders.html" class="rf-see-all">All breeders</a>
+      </div>
+      <div class="rf-grid rf-grid--3" id="rf-top-breeders"></div>
+    </div>
+  </section>
+
+  <!-- ============ TRENDING BLOODLINES ============ -->
+  <section class="rf-section">
+    <div class="rf-container">
+      <div class="rf-section-head">
+        <div class="rf-section-head__title">
+          <span class="rf-eyebrow">ON THE RISE</span>
+          <h2 class="rf-display-md">Trending Bloodlines</h2>
+        </div>
+      </div>
+      <div class="rf-bloodline-grid">
+        <a href="dog.html?id=whistling-wings-duke" class="rf-bloodline-tile rf-bloodline-tile--lg">
+          <div class="rf-bloodline-tile__art" data-art="duke"></div>
+          <div class="rf-bloodline-tile__body">
+            <span class="rf-pill rf-pill--dark">211 OFFSPRING</span>
+            <h3 class="rf-display-sm on-dark">Whistling Wings' Duke of Earl</h3>
+            <p class="on-dark rf-bloodline-tile__line">3 National Open finalists this derby season</p>
+          </div>
+        </a>
+        <a href="dog.html?id=southern-timber-kobe" class="rf-bloodline-tile">
+          <div class="rf-bloodline-tile__art" data-art="kobe"></div>
+          <div class="rf-bloodline-tile__body">
+            <span class="rf-pill rf-pill--dark">PROSPECT</span>
+            <h3 class="rf-display-sm on-dark">Southern Timber's Black Mamba</h3>
+            <p class="on-dark rf-bloodline-tile__line">Kane × Jinx foundation sire in development</p>
+          </div>
+        </a>
+        <a href="breeder.html?id=cajun-briley-kennels" class="rf-bloodline-tile">
+          <div class="rf-bloodline-tile__art" data-art="cajun"></div>
+          <div class="rf-bloodline-tile__body">
+            <span class="rf-pill rf-pill--dark">LOUISIANA</span>
+            <h3 class="rf-display-sm on-dark">Cajun Briley Kennels</h3>
+            <p class="on-dark rf-bloodline-tile__line">Carrier-status transparency across the program</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED ARTICLES ============ -->
+  <section class="rf-section rf-section--bone">
+    <div class="rf-container">
+      <div class="rf-section-head">
+        <div class="rf-section-head__title">
+          <span class="rf-eyebrow">FROM THE JOURNAL</span>
+          <h2 class="rf-display-md">Featured Articles</h2>
+        </div>
+        <a href="articles.html" class="rf-see-all">All articles</a>
+      </div>
+      <div class="rf-grid rf-grid--3" id="rf-featured-articles"></div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="rf-cta-band">
+    <div class="rf-container rf-cta-band__inner">
+      <h2 class="rf-display-md on-dark">List your program on RetrieverForge.</h2>
+      <p class="on-dark rf-body-lg">Verification is free for breeders who can document their clearances.</p>
+      <a href="signin.html" class="rf-btn rf-btn--copper">Claim your kennel</a>
+    </div>
+  </section>
+
+</main>
+
+<div id="rf-footer-mount"></div>
+
+<script src="js/illustrations.js"></script>
+<script src="js/gauges.js"></script>
+<script src="js/data.js"></script>
+<script src="js/chrome.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

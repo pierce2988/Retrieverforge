@@ -1,0 +1,202 @@
+/* ============================================================
+   RETRIEVERFORGE — CARDS
+   ============================================================ */
+
+.rf-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-5);
+}
+@media (max-width: 1080px) { .rf-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 820px) { .rf-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .rf-grid { grid-template-columns: 1fr; } }
+
+.rf-grid--3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1080px) { .rf-grid--3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .rf-grid--3 { grid-template-columns: 1fr; } }
+
+.rf-rail {
+  display: flex;
+  gap: var(--sp-5);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: var(--sp-2);
+  margin: 0 calc(var(--sp-6) * -1);
+  padding-left: var(--sp-6);
+  padding-right: var(--sp-6);
+  scrollbar-width: none;
+}
+.rf-rail::-webkit-scrollbar { display: none; }
+.rf-rail > * { scroll-snap-align: start; flex-shrink: 0; }
+
+/* ---------- Stud Card ---------- */
+.rf-stud-card {
+  display: block;
+  background: var(--rf-ink);
+  border-radius: var(--rf-radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--rf-line-dark);
+  transition: transform var(--rf-dur-med) var(--rf-ease), border-color var(--rf-dur-fast) var(--rf-ease), box-shadow var(--rf-dur-med) var(--rf-ease);
+  width: 100%;
+}
+.rf-stud-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(181,112,58,0.4);
+  box-shadow: var(--rf-shadow-lg);
+}
+.rf-stud-card__photo {
+  position: relative;
+  aspect-ratio: 4/3;
+  background: var(--rf-charcoal);
+  overflow: hidden;
+}
+.rf-stud-card__photo svg { width: 100%; height: 100%; }
+.rf-stud-card__rating {
+  position: absolute;
+  top: var(--sp-3);
+  right: var(--sp-3);
+  background: rgba(11,11,12,0.78);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(181,112,58,0.5);
+  border-radius: var(--rf-radius-md);
+  padding: 6px 10px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.rf-stud-card__rating-num { font-family: var(--rf-mono); font-weight: 700; font-size: 1.05rem; color: var(--rf-copper-hi); }
+.rf-stud-card__rating-label { font-family: var(--rf-mono); font-size: 9px; letter-spacing: 0.08em; color: var(--rf-smoke-on-dark); text-transform: uppercase; }
+.rf-stud-card__body { padding: var(--sp-4) var(--sp-4) var(--sp-5); }
+.rf-stud-card__name {
+  font-family: var(--rf-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--rf-paper);
+  margin-bottom: 2px;
+}
+.rf-stud-card__call { color: var(--rf-smoke-on-dark); font-size: var(--rf-size-caption); margin-bottom: var(--sp-3); }
+.rf-stud-card__meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: var(--sp-3); }
+.rf-stud-card__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--rf-line-dark);
+  padding-top: var(--sp-3);
+}
+.rf-stud-card__stat { display: flex; flex-direction: column; gap: 2px; }
+.rf-stud-card__stat-val { font-family: var(--rf-mono); font-size: 0.95rem; color: var(--rf-paper); font-weight: 600; }
+.rf-stud-card__stat-label { font-family: var(--rf-mono); font-size: 9px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--rf-smoke-on-dark); }
+
+/* ---------- Breeding Card ---------- */
+.rf-breeding-card {
+  display: block;
+  background: var(--rf-paper);
+  border: 1px solid var(--rf-line-light);
+  border-radius: var(--rf-radius-lg);
+  overflow: hidden;
+  transition: transform var(--rf-dur-med) var(--rf-ease), box-shadow var(--rf-dur-med) var(--rf-ease), border-color var(--rf-dur-fast) var(--rf-ease);
+}
+.rf-breeding-card:hover { transform: translateY(-4px); box-shadow: var(--rf-shadow-md); border-color: rgba(181,112,58,0.35); }
+.rf-breeding-card__pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+.rf-breeding-card__half { aspect-ratio: 1; background: var(--rf-bone); overflow: hidden; }
+.rf-breeding-card__half svg { width: 100%; height: 100%; }
+.rf-breeding-card__x {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 40px; height: 40px;
+  background: var(--rf-black);
+  color: var(--rf-copper-hi);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--rf-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 1px solid var(--rf-copper);
+  z-index: 2;
+}
+.rf-breeding-card__body { padding: var(--sp-4) var(--sp-4) var(--sp-5); }
+.rf-breeding-card__names { font-family: var(--rf-display); font-size: 1.05rem; font-weight: 600; margin-bottom: var(--sp-1); }
+.rf-breeding-card__meta { color: var(--rf-smoke); font-size: var(--rf-size-caption); font-family: var(--rf-mono); margin-bottom: var(--sp-3); }
+.rf-breeding-card__foot { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--rf-line-light); padding-top: var(--sp-3); }
+
+/* ---------- Breeder Card ---------- */
+.rf-breeder-card {
+  display: block;
+  background: var(--rf-paper);
+  border: 1px solid var(--rf-line-light);
+  border-radius: var(--rf-radius-lg);
+  padding: var(--sp-5);
+  transition: transform var(--rf-dur-med) var(--rf-ease), box-shadow var(--rf-dur-med) var(--rf-ease);
+}
+.rf-breeder-card:hover { transform: translateY(-4px); box-shadow: var(--rf-shadow-md); }
+.rf-breeder-card__top { display: flex; align-items: center; gap: var(--sp-4); margin-bottom: var(--sp-4); }
+.rf-breeder-card__mark {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--rf-black);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--rf-display);
+  font-size: 1.3rem;
+  color: var(--rf-copper-hi);
+  border: 1px solid var(--rf-copper-dim);
+}
+.rf-breeder-card__name { font-family: var(--rf-display); font-size: 1.1rem; font-weight: 600; }
+.rf-breeder-card__loc { color: var(--rf-smoke); font-size: var(--rf-size-caption); font-family: var(--rf-mono); }
+.rf-breeder-card__bio { color: var(--rf-charcoal); font-size: var(--rf-size-body-sm); margin-bottom: var(--sp-4); }
+.rf-breeder-card__row { display: flex; justify-content: space-between; border-top: 1px solid var(--rf-line-light); padding-top: var(--sp-3); }
+.rf-breeder-card__stat { text-align: center; }
+.rf-breeder-card__stat-val { font-family: var(--rf-mono); font-weight: 700; font-size: 1.1rem; }
+.rf-breeder-card__stat-label { font-family: var(--rf-mono); font-size: 9px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--rf-smoke); }
+
+/* ---------- Litter Card ---------- */
+.rf-litter-card {
+  display: block;
+  background: var(--rf-ink);
+  border-radius: var(--rf-radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--rf-line-dark);
+  transition: transform var(--rf-dur-med) var(--rf-ease);
+}
+.rf-litter-card:hover { transform: translateY(-4px); }
+.rf-litter-card__photo { aspect-ratio: 16/10; background: var(--rf-charcoal); position: relative; overflow: hidden; }
+.rf-litter-card__photo svg { width: 100%; height: 100%; }
+.rf-litter-card__status {
+  position: absolute; top: var(--sp-3); left: var(--sp-3);
+}
+.rf-litter-card__body { padding: var(--sp-4) var(--sp-4) var(--sp-5); }
+.rf-litter-card__title { font-family: var(--rf-display); font-size: 1.05rem; color: var(--rf-paper); margin-bottom: var(--sp-1); }
+.rf-litter-card__meta { color: var(--rf-smoke-on-dark); font-family: var(--rf-mono); font-size: var(--rf-size-caption); }
+
+/* ---------- Article Card ---------- */
+.rf-article-card { display: block; }
+.rf-article-card__photo { aspect-ratio: 16/10; background: var(--rf-bone); border-radius: var(--rf-radius-md); overflow: hidden; margin-bottom: var(--sp-4); }
+.rf-article-card__photo svg { width: 100%; height: 100%; }
+.rf-article-card__cat { margin-bottom: var(--sp-2); }
+.rf-article-card__title { font-family: var(--rf-display); font-size: 1.2rem; font-weight: 600; margin-bottom: var(--sp-2); line-height: 1.2; }
+.rf-article-card__excerpt { color: var(--rf-charcoal); font-size: var(--rf-size-body-sm); margin-bottom: var(--sp-3); }
+.rf-article-card__meta { color: var(--rf-smoke); font-family: var(--rf-mono); font-size: var(--rf-size-micro); }
+
+/* ---------- Gear Review Card ---------- */
+.rf-gear-card {
+  background: var(--rf-paper);
+  border: 1px solid var(--rf-line-light);
+  border-radius: var(--rf-radius-lg);
+  padding: var(--sp-5);
+  display: block;
+  transition: box-shadow var(--rf-dur-med) var(--rf-ease), transform var(--rf-dur-med) var(--rf-ease);
+}
+.rf-gear-card:hover { box-shadow: var(--rf-shadow-md); transform: translateY(-3px); }
+.rf-gear-card__photo { aspect-ratio: 4/3; background: var(--rf-bone); border-radius: var(--rf-radius-md); margin-bottom: var(--sp-4); overflow:hidden; }
+.rf-gear-card__photo svg { width: 100%; height: 100%; }
+.rf-gear-card__cat { font-family: var(--rf-mono); font-size: var(--rf-size-micro); text-transform: uppercase; letter-spacing: 0.06em; color: var(--rf-copper-dim); margin-bottom: var(--sp-2); }
+.rf-gear-card__name { font-family: var(--rf-display); font-weight: 600; font-size: 1.05rem; margin-bottom: var(--sp-2); }
+.rf-gear-card__score { display: flex; align-items: baseline; gap: 6px; margin-bottom: var(--sp-2);}
+.rf-gear-card__score-num { font-family: var(--rf-mono); font-weight: 700; font-size: 1.4rem; }
+.rf-gear-card__score-max { font-family: var(--rf-mono); font-size: var(--rf-size-caption); color: var(--rf-smoke); }

@@ -1,0 +1,77 @@
+/* ============================================================
+   RETRIEVERFORGE — SEARCH MODAL
+   ============================================================ */
+
+.rf-search-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 12vh;
+}
+.rf-search-modal.is-open { display: flex; }
+.rf-search-modal__backdrop {
+  position: absolute; inset: 0;
+  background: rgba(11,11,12,0.7);
+  backdrop-filter: blur(4px);
+}
+.rf-search-modal__panel {
+  position: relative;
+  width: min(620px, 92vw);
+  background: var(--rf-paper);
+  border-radius: var(--rf-radius-lg);
+  box-shadow: var(--rf-shadow-lg);
+  overflow: hidden;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+.rf-search-modal__input-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-5);
+  border-bottom: 1px solid var(--rf-line-light);
+}
+.rf-search-modal__input-row svg { width: 19px; height: 19px; color: var(--rf-smoke); flex-shrink: 0; }
+.rf-search-modal__input-row input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: var(--rf-sans);
+  font-size: 1.05rem;
+  background: transparent;
+  color: var(--rf-black);
+}
+.rf-search-modal__input-row kbd {
+  font-family: var(--rf-mono);
+  font-size: 10px;
+  color: var(--rf-smoke);
+  border: 1px solid var(--rf-line-light);
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+.rf-search-modal__results { overflow-y: auto; padding: var(--sp-3); }
+.rf-search-modal__group { margin-bottom: var(--sp-3); }
+.rf-search-modal__group-label {
+  font-family: var(--rf-mono);
+  font-size: var(--rf-size-micro);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--rf-copper-dim);
+  padding: var(--sp-2) var(--sp-3);
+}
+.rf-search-modal__result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--sp-3);
+  border-radius: var(--rf-radius-md);
+  transition: background var(--rf-dur-fast) var(--rf-ease);
+}
+.rf-search-modal__result:hover { background: var(--rf-bone); }
+.rf-search-modal__result-name { font-weight: 500; }
+.rf-search-modal__result-meta { font-family: var(--rf-mono); font-size: var(--rf-size-caption); color: var(--rf-smoke); }
+.rf-search-modal__empty { padding: var(--sp-6); text-align: center; color: var(--rf-smoke); font-size: var(--rf-size-body-sm); }
