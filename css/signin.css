@@ -1,0 +1,40 @@
+/* ============================================================
+   RETRIEVERFORGE — SIGN IN
+   ============================================================ */
+
+.rf-signin {
+  min-height: calc(100vh - 72px);
+  display: grid;
+  grid-template-columns: 1fr 460px;
+}
+@media (max-width: 880px) {
+  .rf-signin { grid-template-columns: 1fr; }
+  .rf-signin__art { display: none; }
+}
+.rf-signin__art { background: var(--rf-black); position: relative; overflow: hidden; }
+.rf-signin__art svg { width: 100%; height: 100%; object-fit: cover; }
+.rf-signin__panel {
+  padding: var(--sp-9) var(--sp-7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 460px;
+  width: 100%;
+}
+.rf-field { display: flex; flex-direction: column; gap: var(--sp-2); margin-bottom: var(--sp-4); }
+.rf-field__label { font-family: var(--rf-mono); font-size: var(--rf-size-micro); letter-spacing: 0.05em; text-transform: uppercase; color: var(--rf-smoke); }
+.rf-field input {
+  font-family: var(--rf-sans);
+  font-size: var(--rf-size-body);
+  padding: 13px 16px;
+  border: 1px solid var(--rf-line-light);
+  border-radius: var(--rf-radius-md);
+  background: var(--rf-paper);
+  outline: none;
+  transition: border-color var(--rf-dur-fast) var(--rf-ease);
+}
+.rf-field input:focus { border-color: var(--rf-copper); }
+.rf-signin__form { margin-top: var(--sp-6); }
+.rf-signin__form button { margin-top: var(--sp-2); }
+.rf-signin__divider { display: flex; align-items: center; gap: var(--sp-3); margin: var(--sp-6) 0; color: var(--rf-smoke); font-size: var(--rf-size-caption); }
+.rf-signin__divider::before, .rf-signin__divider::after { content: ""; flex: 1; height: 1px; background: var(--rf-line-light); }

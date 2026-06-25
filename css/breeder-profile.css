@@ -1,0 +1,32 @@
+/* ============================================================
+   RETRIEVERFORGE — BREEDER PROFILE
+   ============================================================ */
+
+.rf-breeder-hero { position: relative; min-height: 42vh; display: flex; align-items: flex-end; overflow: hidden; background: var(--rf-black); }
+.rf-breeder-hero__art { position: absolute; inset: 0; z-index: 0; }
+.rf-breeder-hero__art svg { width: 100%; height: 100%; object-fit: cover; }
+.rf-breeder-hero__scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(13,15,17,0.3) 0%, rgba(13,15,17,0.94) 100%); }
+.rf-breeder-hero__inner { position: relative; z-index: 2; padding-bottom: var(--sp-7); width: 100%; }
+.rf-breeder-hero__row { display: flex; align-items: center; gap: var(--sp-5); }
+.rf-breeder-hero__mark {
+  width: 88px; height: 88px; border-radius: 50%;
+  background: var(--rf-ink); border: 2px solid var(--rf-copper);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--rf-display); font-size: 2rem; font-weight: 600; color: var(--rf-copper-hi);
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  .rf-breeder-hero__row { flex-direction: column; text-align: center; }
+}
+
+.rf-review {
+  padding: var(--sp-4) 0;
+  border-bottom: 1px solid var(--rf-line-light);
+}
+.rf-review:last-child { border-bottom: none; }
+.rf-review__top { display: flex; justify-content: space-between; margin-bottom: var(--sp-2); }
+.rf-review__name { font-weight: 600; }
+.rf-review__stars { color: var(--rf-copper); display: flex; gap: 2px; }
+.rf-review__stars svg { width: 14px; height: 14px; }
+.rf-review__text { color: var(--rf-charcoal); font-size: var(--rf-size-body-sm); }
+.rf-review__date { font-family: var(--rf-mono); font-size: var(--rf-size-micro); color: var(--rf-smoke); }

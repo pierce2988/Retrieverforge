@@ -1,0 +1,105 @@
+/* ============================================================
+   RETRIEVERFORGE — DESIGN TOKENS
+   ============================================================
+   Palette
+   --rf-black:      #0D0F11   anchor / hero backgrounds
+   --rf-ink:        #1A1C1F   panels, raised surfaces on black
+   --rf-charcoal:   #2E3237   secondary dark, borders on dark
+   --rf-paper:      #F5F2EA   primary light background (warm, not stark)
+   --rf-bone:       #E6E2D7   secondary light surface
+   --rf-copper:     #F97316  primary accent — burnt orange, sunset/marsh warmth
+   --rf-copper-hi:  #FB923C   copper hover/highlight state
+   --rf-olive:      #5C6B4F   secondary accent — marsh grass
+   --rf-leather:    #7A5A3A   tertiary accent — leather/wood
+   --rf-smoke:      #6B6862   tertiary text, captions, meta
+   ============================================================ */
+
+:root {
+  /* Color — from brand reference */
+  --rf-black: #0D0F11;
+  --rf-ink: #1A1C1F;
+  --rf-ink-2: #202326;
+  --rf-charcoal: #2E3237;
+  --rf-paper: #F5F2EA;
+  --rf-bone: #E6E2D7;
+  --rf-bone-2: #D8D2C2;
+  --rf-copper: #F97316;
+  --rf-copper-hi: #FB923C;
+  --rf-copper-dim: #C2580E;
+  --rf-olive: #5C6B4F;
+  --rf-olive-hi: #71815F;
+  --rf-leather: #7A5A3A;
+  --rf-leather-hi: #93714C;
+  --rf-smoke: #6B6862;
+  --rf-smoke-on-dark: #9A968D;
+  --rf-line-dark: rgba(245,242,234,0.12);
+  --rf-line-light: rgba(13,15,17,0.12);
+  --rf-good: #5C6B4F;
+  --rf-warn: #F97316;
+
+  /* Type */
+  --rf-display: "Playfair Display", "Iowan Old Style", Georgia, serif;
+  --rf-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --rf-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Type scale (clamp for fluid resize) */
+  --rf-size-display-xl: clamp(3rem, 7vw, 6.5rem);
+  --rf-size-display-lg: clamp(2.25rem, 5vw, 4.25rem);
+  --rf-size-display-md: clamp(1.75rem, 3vw, 2.75rem);
+  --rf-size-display-sm: clamp(1.4rem, 2vw, 1.85rem);
+  --rf-size-body-lg: 1.1875rem;
+  --rf-size-body: 1.0625rem;
+  --rf-size-body-sm: 0.9375rem;
+  --rf-size-caption: 0.8125rem;
+  --rf-size-micro: 0.71875rem;
+
+  /* Spacing (8px rhythm, with a couple half-steps) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+  --sp-10: 128px;
+  --sp-11: 160px;
+
+  /* Radius — soft but not bubbly */
+  --rf-radius-sm: 6px;
+  --rf-radius-md: 10px;
+  --rf-radius-lg: 16px;
+  --rf-radius-pill: 999px;
+
+  /* Shadow — used sparingly, warm not blue */
+  --rf-shadow-sm: 0 1px 2px rgba(13,15,17,0.1);
+  --rf-shadow-md: 0 8px 24px -8px rgba(13,15,17,0.22);
+  --rf-shadow-lg: 0 24px 64px -16px rgba(13,15,17,0.32);
+  --rf-shadow-copper: 0 8px 32px -8px rgba(249,115,22,0.4);
+
+  /* Motion */
+  --rf-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --rf-ease-in: cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  --rf-dur-fast: 160ms;
+  --rf-dur-med: 320ms;
+  --rf-dur-slow: 560ms;
+
+  /* Container */
+  --rf-max: 1400px;
+  --rf-max-text: 680px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --rf-dur-fast: 0ms;
+    --rf-dur-med: 0ms;
+    --rf-dur-slow: 0ms;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
