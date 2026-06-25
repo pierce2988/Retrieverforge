@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breeder Profile — RetrieverForge</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/gauges.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/search-modal.css">
+<link rel="stylesheet" href="css/breeder-profile.css">
+</head>
+<body>
+<a href="#main" class="rf-skip">Skip to content</a>
+<div id="rf-nav-mount"></div>
+
+<main id="main">
+
+  <section class="rf-breeder-hero">
+    <div class="rf-breeder-hero__art" id="rf-breeder-art"></div>
+    <div class="rf-breeder-hero__scrim"></div>
+    <div class="rf-container rf-breeder-hero__inner">
+      <div class="rf-caption on-dark" id="rf-breadcrumb" style="margin-bottom:var(--sp-4)"></div>
+      <div class="rf-breeder-hero__row">
+        <div class="rf-breeder-hero__mark" id="rf-breeder-mark"></div>
+        <div>
+          <div id="rf-breeder-badges" style="margin-bottom:var(--sp-2)"></div>
+          <h1 class="rf-display-lg on-dark" id="rf-breeder-name"></h1>
+          <p class="on-dark rf-body-lg" id="rf-breeder-loc"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rf-container">
+    <div class="rf-profile-layout">
+      <div class="rf-profile-main">
+
+        <section class="rf-profile-block">
+          <span class="rf-eyebrow">ABOUT</span>
+          <p class="rf-body-lg" id="rf-breeder-bio" style="margin-top:var(--sp-4); max-width:var(--rf-max-text)"></p>
+        </section>
+
+        <section class="rf-profile-block">
+          <span class="rf-eyebrow">KENNEL PHOTOS</span>
+          <div class="rf-gallery-grid" id="rf-breeder-photos" style="margin-top:var(--sp-4)"></div>
+        </section>
+
+        <section class="rf-profile-block">
+          <div class="rf-section-head" style="margin-bottom:var(--sp-4)"><span class="rf-eyebrow">STUDS</span></div>
+          <div class="rf-grid" id="rf-breeder-studs"></div>
+        </section>
+
+        <section class="rf-profile-block">
+          <div class="rf-section-head" style="margin-bottom:var(--sp-4)"><span class="rf-eyebrow">FEMALES</span></div>
+          <div class="rf-grid" id="rf-breeder-females"></div>
+        </section>
+
+        <section class="rf-profile-block">
+          <div class="rf-section-head" style="margin-bottom:var(--sp-4)"><span class="rf-eyebrow">CURRENT LITTERS</span></div>
+          <div class="rf-rail" id="rf-breeder-litters"></div>
+        </section>
+
+        <section class="rf-profile-block">
+          <div class="rf-section-head" style="margin-bottom:var(--sp-4)"><span class="rf-eyebrow">PAST BREEDINGS</span></div>
+          <div class="rf-grid rf-grid--3" id="rf-breeder-breedings"></div>
+        </section>
+
+        <section class="rf-profile-block">
+          <span class="rf-eyebrow">REVIEWS</span>
+          <div id="rf-breeder-reviews" style="margin-top:var(--sp-4)"></div>
+        </section>
+
+      </div>
+
+      <aside class="rf-profile-sidebar">
+        <div class="rf-sidebar-card" id="rf-breeder-stats-mount"></div>
+        <div class="rf-sidebar-card" id="rf-breeder-contact-mount"></div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<div id="rf-footer-mount"></div>
+
+<script src="js/illustrations.js"></script>
+<script src="js/gauges.js"></script>
+<script src="js/data.js"></script>
+<script src="js/chrome.js"></script>
+<script src="js/breeder-profile.js"></script>
+</body>
+</html>

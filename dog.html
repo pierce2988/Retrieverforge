@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dog Profile — RetrieverForge</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/gauges.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/search-modal.css">
+<link rel="stylesheet" href="css/dog-profile.css">
+</head>
+<body>
+<a href="#main" class="rf-skip">Skip to content</a>
+<div id="rf-nav-mount"></div>
+
+<main id="main">
+
+  <!-- ============ PROFILE HERO ============ -->
+  <section class="rf-profile-hero">
+    <div class="rf-profile-hero__art" id="rf-profile-art"></div>
+    <div class="rf-profile-hero__scrim"></div>
+    <div class="rf-container rf-profile-hero__inner">
+      <div class="rf-profile-hero__breadcrumb rf-caption on-dark" id="rf-breadcrumb"></div>
+      <div class="rf-profile-hero__row">
+        <div>
+          <div class="rf-profile-hero__titles" id="rf-titles-row"></div>
+          <h1 class="rf-display-lg on-dark" id="rf-dog-name"></h1>
+          <p class="on-dark rf-body-lg" id="rf-dog-callname"></p>
+          <div class="rf-profile-hero__meta" id="rf-dog-meta"></div>
+        </div>
+        <div class="rf-profile-hero__actions">
+          <button class="rf-btn rf-btn--ghost-dark" id="rf-save-btn">Save</button>
+          <a href="#contact" class="rf-btn rf-btn--copper">Contact Breeder</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rf-container">
+
+    <div class="rf-profile-layout">
+      <!-- ============ MAIN COLUMN ============ -->
+      <div class="rf-profile-main">
+
+        <!-- StudForge Rating -->
+        <section class="rf-profile-block">
+          <span class="rf-eyebrow">STUDFORGE RATING</span>
+          <div class="rf-rating-card" id="rf-rating-block" style="margin-top:var(--sp-4)"></div>
+        </section>
+
+        <!-- About -->
+        <section class="rf-profile-block">
+          <span class="rf-eyebrow">ABOUT</span>
+          <p class="rf-body-lg rf-about-text" id="rf-dog-bio" style="margin-top:var(--sp-4)"></p>
+        </section>
+
+        <!-- Pedigree -->
+        <section class="rf-profile-block">
+          <div class="rf-section-head" style="margin-bottom:var(--sp-4)">
+            <span class="rf-eyebrow">PEDIGREE — THREE GENERATIONS</span>
+          </div>
+          <div class="rf-pedigree" id="rf-pedigree"></div>
+        </section>
+
+        <!-- Health -->
+        <section class="rf-profile-block">
+          <span class="rf-eyebrow">HEALTH CLEARANCES</span>
+          <div class="rf-clearance-row" id="rf-clearances" style="margin-top:var(--sp-4)"></div>
+        </section>
+
+        <!-- Performance -->
+        <section class="rf-profile-block" id="rf-performance-section">
+          <span class="rf-eyebrow">PERFORMANCE</span>
+          <div class="rf-perf-table" id="rf-performance" style="margin-top:var(--sp-4)"></div>
+        </section>
+
+        <!-- Videos -->
+        <section class="rf-profile-block">
+          <span class="rf-eyebrow">VIDEOS</span>
+          <div class="rf-video-grid" id="rf-videos" style="margin-top:var(--sp-4)"></div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="rf-profile-block">
+          <span class="rf-eyebrow">GALLERY</span>
+          <div class="rf-gallery-grid" id="rf-gallery" style="margin-top:var(--sp-4)"></div>
+        </section>
+
+        <!-- Offspring -->
+        <section class="rf-profile-block" id="rf-offspring-section">
+          <div class="rf-section-head" style="margin-bottom:var(--sp-4)">
+            <span class="rf-eyebrow">OFFSPRING</span>
+          </div>
+          <div class="rf-grid" id="rf-offspring"></div>
+        </section>
+
+        <!-- Litters -->
+        <section class="rf-profile-block" id="rf-litters-section">
+          <div class="rf-section-head" style="margin-bottom:var(--sp-4)">
+            <span class="rf-eyebrow">LITTERS</span>
+          </div>
+          <div class="rf-rail" id="rf-dog-litters"></div>
+        </section>
+
+        <!-- Related Dogs -->
+        <section class="rf-profile-block">
+          <div class="rf-section-head" style="margin-bottom:var(--sp-4)">
+            <span class="rf-eyebrow">RELATED DOGS</span>
+          </div>
+          <div class="rf-grid" id="rf-related-dogs"></div>
+        </section>
+
+      </div>
+
+      <!-- ============ SIDEBAR ============ -->
+      <aside class="rf-profile-sidebar">
+        <div class="rf-sidebar-card" id="rf-breeder-card-mount"></div>
+        <div class="rf-sidebar-card" id="rf-owner-card-mount"></div>
+        <div class="rf-sidebar-card rf-sidebar-card--contact" id="contact">
+          <span class="rf-eyebrow">INQUIRE</span>
+          <h3 class="rf-display-sm" style="margin-top:var(--sp-3)">Interested in this dog?</h3>
+          <p class="rf-body-sm" style="color:var(--rf-smoke); margin-top:var(--sp-2)">Send a message directly to the breeder of record.</p>
+          <button class="rf-btn rf-btn--copper rf-btn--block" style="margin-top:var(--sp-4)">Message Breeder</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+</main>
+
+<div id="rf-footer-mount"></div>
+
+<script src="js/illustrations.js"></script>
+<script src="js/gauges.js"></script>
+<script src="js/data.js"></script>
+<script src="js/chrome.js"></script>
+<script src="js/dog-profile.js"></script>
+</body>
+</html>

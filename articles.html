@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles — RetrieverForge</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/gauges.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/search-modal.css">
+<link rel="stylesheet" href="css/directory.css">
+</head>
+<body>
+<a href="#main" class="rf-skip">Skip to content</a>
+<div id="rf-nav-mount"></div>
+
+<main id="main">
+  <section class="rf-directory-header">
+    <div class="rf-container">
+      <span class="rf-eyebrow">THE JOURNAL</span>
+      <h1 class="rf-display-lg">Articles</h1>
+      <p class="rf-body-lg" style="margin-top:var(--sp-3); max-width:560px; color:var(--rf-charcoal)">Training, breeding, health, nutrition, and genetics — written for people who work their dogs.</p>
+    </div>
+  </section>
+
+  <div class="rf-container">
+    <div class="rf-directory-layout">
+      <aside class="rf-filters">
+        <div class="rf-filters__group">
+          <div class="rf-filters__title">Category</div>
+          <label class="rf-checkbox"><input type="checkbox" data-filter="cat" value="Training"> Training</label>
+          <label class="rf-checkbox"><input type="checkbox" data-filter="cat" value="Breeding"> Breeding</label>
+          <label class="rf-checkbox"><input type="checkbox" data-filter="cat" value="Health"> Health</label>
+          <label class="rf-checkbox"><input type="checkbox" data-filter="cat" value="Nutrition"> Nutrition</label>
+          <label class="rf-checkbox"><input type="checkbox" data-filter="cat" value="Puppy Selection"> Puppy Selection</label>
+          <label class="rf-checkbox"><input type="checkbox" data-filter="cat" value="Genetics"> Genetics</label>
+          <label class="rf-checkbox"><input type="checkbox" data-filter="cat" value="Event Coverage"> Event Coverage</label>
+        </div>
+      </aside>
+      <div class="rf-directory-results">
+        <div class="rf-directory-toolbar">
+          <span class="rf-caption" id="rf-result-count"></span>
+        </div>
+        <div class="rf-grid rf-grid--3" id="rf-articles-grid"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="rf-footer-mount"></div>
+
+<script src="js/illustrations.js"></script>
+<script src="js/gauges.js"></script>
+<script src="js/data.js"></script>
+<script src="js/chrome.js"></script>
+<script src="js/articles.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rankings — RetrieverForge</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/gauges.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/search-modal.css">
+<link rel="stylesheet" href="css/litters.css">
+<link rel="stylesheet" href="css/rankings.css">
+</head>
+<body>
+<a href="#main" class="rf-skip">Skip to content</a>
+<div id="rf-nav-mount"></div>
+
+<main id="main">
+  <section class="rf-directory-header" style="background:var(--rf-black); border-bottom:1px solid var(--rf-line-dark)">
+    <div class="rf-container">
+      <span class="rf-eyebrow">LEADERBOARDS</span>
+      <h1 class="rf-display-lg on-dark">Rankings</h1>
+      <p class="rf-body-lg on-dark" style="margin-top:var(--sp-3); max-width:560px">The week's standings across every verified category RetrieverForge tracks.</p>
+      <div class="rf-tabs" id="rf-rank-tabs" style="margin-top:var(--sp-6)">
+        <button class="rf-tab is-active" data-tab="topProducing">Top Producing Studs</button>
+        <button class="rf-tab" data-tab="topYoung">Top Young Studs</button>
+        <button class="rf-tab" data-tab="highestRated">Highest StudForge Ratings</button>
+        <button class="rf-tab" data-tab="mostTitled">Most Titled Dogs</button>
+        <button class="rf-tab" data-tab="mostVerifiedLitters">Most Verified Litters</button>
+        <button class="rf-tab" data-tab="mostViewed">Most Viewed Dogs</button>
+        <button class="rf-tab" data-tab="topBreeders">Top Breeders</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="rf-container" style="padding:var(--sp-7) 0 var(--sp-10)">
+    <div class="rf-rank-list" id="rf-rank-list"></div>
+  </div>
+</main>
+
+<div id="rf-footer-mount"></div>
+
+<script src="js/illustrations.js"></script>
+<script src="js/gauges.js"></script>
+<script src="js/data.js"></script>
+<script src="js/chrome.js"></script>
+<script src="js/rankings.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In — RetrieverForge</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/search-modal.css">
+<link rel="stylesheet" href="css/signin.css">
+</head>
+<body>
+<a href="#main" class="rf-skip">Skip to content</a>
+<div id="rf-nav-mount"></div>
+
+<main id="main">
+  <section class="rf-signin">
+    <div class="rf-signin__art" id="rf-signin-art"></div>
+    <div class="rf-signin__panel">
+      <span class="rf-eyebrow">WELCOME BACK</span>
+      <h1 class="rf-display-md" style="margin-top:var(--sp-3)">Sign in to RetrieverForge</h1>
+      <p class="rf-caption" style="margin-top:var(--sp-2)">Breeders, owners, and buyers all sign in here.</p>
+
+      <form class="rf-signin__form" id="rf-signin-form">
+        <label class="rf-field">
+          <span class="rf-field__label">Email</span>
+          <input type="email" placeholder="you@kennel.com" required>
+        </label>
+        <label class="rf-field">
+          <span class="rf-field__label">Password</span>
+          <input type="password" placeholder="••••••••" required>
+        </label>
+        <button type="submit" class="rf-btn rf-btn--copper rf-btn--block">Sign In</button>
+      </form>
+
+      <div class="rf-signin__divider"><span>or</span></div>
+
+      <button class="rf-btn rf-btn--ghost-light rf-btn--block">Continue with Google</button>
+
+      <p class="rf-caption" style="text-align:center; margin-top:var(--sp-6)">New to RetrieverForge? <a href="#" style="color:var(--rf-copper-dim); text-decoration:underline">Create an account</a></p>
+      <p class="rf-caption" style="text-align:center; margin-top:var(--sp-3)"><a href="#" style="color:var(--rf-smoke); text-decoration:underline">Claim your kennel as a breeder</a></p>
+    </div>
+  </section>
+</main>
+
+<div id="rf-footer-mount"></div>
+
+<script src="js/illustrations.js"></script>
+<script src="js/gauges.js"></script>
+<script src="js/data.js"></script>
+<script src="js/chrome.js"></script>
+<script src="js/signin.js"></script>
+</body>
+</html>

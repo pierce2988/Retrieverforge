@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Litter — RetrieverForge</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/gauges.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/search-modal.css">
+<link rel="stylesheet" href="css/breeding-profile.css">
+</head>
+<body>
+<a href="#main" class="rf-skip">Skip to content</a>
+<div id="rf-nav-mount"></div>
+
+<main id="main">
+  <div class="rf-container" style="padding-top:var(--sp-6)">
+    <div class="rf-caption" id="rf-breadcrumb"></div>
+  </div>
+
+  <section class="rf-bp-header">
+    <div class="rf-container rf-bp-header__row">
+      <div class="rf-bp-header__photo" id="rf-lit-sire-photo"></div>
+      <div class="rf-bp-header__center">
+        <span class="rf-pill rf-pill--copper" id="rf-lit-status"></span>
+        <h1 class="rf-display-lg" id="rf-lit-title" style="margin-top:var(--sp-3)"></h1>
+        <p class="rf-caption" id="rf-lit-meta" style="margin-top:var(--sp-2)"></p>
+      </div>
+      <div class="rf-bp-header__photo" id="rf-lit-dam-photo"></div>
+    </div>
+  </section>
+
+  <div class="rf-container">
+    <div class="rf-bp-layout">
+      <div class="rf-bp-main">
+
+        <section class="rf-profile-block">
+          <span class="rf-eyebrow">PARENTS</span>
+          <div class="rf-grid" style="grid-template-columns:repeat(2,1fr); margin-top:var(--sp-4)" id="rf-lit-parents"></div>
+        </section>
+
+        <section class="rf-profile-block">
+          <span class="rf-eyebrow">AVAILABILITY</span>
+          <div id="rf-lit-availability" style="margin-top:var(--sp-4)"></div>
+        </section>
+
+        <section class="rf-profile-block">
+          <span class="rf-eyebrow">HEALTH</span>
+          <div class="rf-clearance-row" id="rf-lit-health" style="margin-top:var(--sp-4)"></div>
+        </section>
+
+        <section class="rf-profile-block">
+          <span class="rf-eyebrow">PEDIGREE</span>
+          <div class="rf-pedigree" id="rf-lit-pedigree" style="margin-top:var(--sp-4)"></div>
+        </section>
+
+        <section class="rf-profile-block">
+          <span class="rf-eyebrow">PHOTOS</span>
+          <div class="rf-gallery-grid" id="rf-lit-photos" style="margin-top:var(--sp-4)"></div>
+        </section>
+
+        <section class="rf-profile-block">
+          <span class="rf-eyebrow">PUPPY UPDATES</span>
+          <div id="rf-lit-updates" style="margin-top:var(--sp-4)"></div>
+        </section>
+
+      </div>
+
+      <aside class="rf-profile-sidebar">
+        <div class="rf-sidebar-card" id="rf-lit-breeder-mount"></div>
+        <div class="rf-sidebar-card rf-sidebar-card--contact">
+          <span class="rf-eyebrow">INQUIRE</span>
+          <h3 class="rf-display-sm" style="margin-top:var(--sp-3)">Interested in this litter?</h3>
+          <p class="rf-body-sm" style="color:var(--rf-smoke); margin-top:var(--sp-2)">Reach out to reserve a spot or ask about the litter.</p>
+          <button class="rf-btn rf-btn--copper rf-btn--block" style="margin-top:var(--sp-4)">Contact Breeder</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<div id="rf-footer-mount"></div>
+
+<script src="js/illustrations.js"></script>
+<script src="js/gauges.js"></script>
+<script src="js/data.js"></script>
+<script src="js/chrome.js"></script>
+<script src="js/litter-profile.js"></script>
+</body>
+</html>

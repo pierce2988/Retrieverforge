@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Article — RetrieverForge</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/gauges.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/search-modal.css">
+<link rel="stylesheet" href="css/article-detail.css">
+</head>
+<body>
+<a href="#main" class="rf-skip">Skip to content</a>
+<div id="rf-nav-mount"></div>
+
+<main id="main">
+  <article class="rf-article">
+    <div class="rf-container" style="padding-top:var(--sp-6)">
+      <div class="rf-caption" id="rf-breadcrumb"></div>
+    </div>
+    <header class="rf-article__header rf-container">
+      <span class="rf-pill rf-pill--copper" id="rf-art-cat"></span>
+      <h1 class="rf-display-lg" id="rf-art-title" style="margin-top:var(--sp-4)"></h1>
+      <p class="rf-caption" id="rf-art-meta" style="margin-top:var(--sp-3)"></p>
+    </header>
+    <div class="rf-article__hero" id="rf-art-hero"></div>
+    <div class="rf-container rf-article__body" id="rf-art-body"></div>
+    <div class="rf-container">
+      <div class="rf-section-head" style="margin:var(--sp-8) 0 var(--sp-4)"><span class="rf-eyebrow">MORE FROM THE JOURNAL</span></div>
+      <div class="rf-grid rf-grid--3" id="rf-art-related" style="margin-bottom:var(--sp-9)"></div>
+    </div>
+  </article>
+</main>
+
+<div id="rf-footer-mount"></div>
+
+<script src="js/illustrations.js"></script>
+<script src="js/gauges.js"></script>
+<script src="js/data.js"></script>
+<script src="js/chrome.js"></script>
+<script src="js/article-detail.js"></script>
+</body>
+</html>
